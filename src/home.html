@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body id="body_template">
+    <!--nav>
+        <div class="nav_logo">
+            <h4>The Nav</h4>
+        </div>
+        <ul class="nav_links">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Work</a>
+            </li>
+            <li>
+                <a href="#">Project</a>
+            </li>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </ul>
+    </nav-->
+    <header class="header_template">
+        <img id="logo" src="./files/images/logo.png"></img>
+        <h2 id="logo_content">國立臺北科技大學 課程查詢系統</h2>
+        <h2 id="login_button"><a href="login.html">登入</a></h2>
+        <div id="language">
+            <div id="chinese" class="language_button language_button_clicked">中文</div>
+            <div id="english" class="language_button">ENGLISH</div>
+        </div>
+        <img id="menu_img" class="mobile_hidden" src="./files/images/menu.png"></img>
+        <menu id="menu_block">
+            <ol>
+                <label>功能</label>
+                <ul>
+                    <img src="./files/images/calendar.png"></img>
+                    <p>我的課表</p>
+                </ul>
+                <ul>
+                    <img src="./files/images/exclamation.png"></img>
+                    <p>停開課程資訊</p>
+                </ul>
+                <ul>
+                    <img src="./files/images/history.png"></img>
+                    <p>歷史課程查詢</p>
+                </ul>
+                <ul>
+                    <img src="./files/images/arrow.png"></img>
+                    <p>課程資訊</p>
+                </ul>
+            </ol>
+        </menu>
+    </header>
+    <main>
+        <div id="main_content">
+            <h1 id="main_content_title">.</h1>
+            <img src="./files/images/homepage_main.GIF" alt="">
+            <span id="main_content_input">
+                <label>學期年</label>
+                    <select class="list">
+                        <option>年度-學期</option>
+                        <option>107-1</option>
+                        <option>107-2</option>
+                        <option>108-1</option>
+                        <option>108-2</option>
+                        <option>109-1</option>
+                        <option>109-2</option>
+                    </select>
+            </span>
+        </div>
+        <div id="main_notice">
+            <div id="main_notice_title">選課重要事項提醒相關連結:</div>
+            <div class="main_notice_list">
+                <div class="list_content">1. 選課注意事項網路選課操作簡介[English]</div>
+                <div class="list_link">LINK</div>
+            </div>
+            <div class="main_notice_list">
+                <div class="list_content">2. 選課專區、大一英文加選作業程序</div>
+                <div class="list_link">LINK</div>
+            </div>
+            <div class="main_notice_list">
+                <div class="list_content">3. 進階英語選課注意事項、研究生線上英文選課注意事項</div>
+                <div class="list_link">LINK</div>
+            </div>
+            <div class="main_notice_list">
+                <div class="list_content">4. 國立台北科技大學系統課程交換資訊</div>
+                <div class="list_link">LINK</div>
+            </div>
+            <div class="main_notice_list">
+                <div class="list_content">5. 選課前請先填寫：外語能力問卷調查及教學優良教師問卷調</div>
+                <div class="list_link">LINK</div>
+            </div>
+        </div>
+        <div id="main_slide">
+            <lable id="silde_title">109學期度第一學期</label>
+                <img src="./files/images/arrow.png" alt="">
+        </div>
+        <div class="main_page" id="main_search">
+            <div class="main_title">
+                <img src="./files/images/search.jpg" alt="">
+                <span class="main_title_content">選單査詢</span>
+            </div>
+            <div class="main_search_block main_search_block_template">
+                <div class="search_block search_block_l" id="search_block1">
+                    <img src="./files/images/main_search/1_Department.jpg" alt=" ">
+                    <p>系所課程</p>
+                </div>
+                <div class="search_block search_block_l" id="search_block2">
+                    <img src="./files/images/main_search/2_General.jpg" alt="">
+                    <p>通識課程</p>
+                </div>
+                <div class="search_block search_block_l" id="search_block3">
+                    <img src="./files/images/main_search/3_PE.jpg" alt="">
+                    <p>體育課程</p>
+                </div>
+                <div class="search_block search_block_l" id="search_block4">
+                    <img src="./files/images/main_search/4_ServiceLearning.jpg" alt="">
+                    <p>服務學習</p>
+                </div>
+                <div class="search_block search_block_s" id="search_block5">
+                    <img src="./files/images/main_search/5_Military.jpg" alt="">
+                    <p>軍訓課程</p>
+                </div>
+                <div class="search_block search_block_s" id="search_block6">
+                    <img src="./files/images/main_search/6_Education.jpg" alt="">
+                    <p>教育學程</p>
+                </div>
+                <div class="search_block search_block_s" id="search_block7">
+                    <img src="./files/images/main_search/7_Micro.jpg" alt="">
+                    <p>微學分課程</p>
+                </div>
+                <div class="search_block search_block_s" id="search_block8">
+                    <img src="./files/images/main_search/8_All.jpg" alt="">
+                    <p>全部課程査詢</p>
+                </div>
+                <div class="search_block_mobile search_color1" id="search_block_mobile1">系所</div>
+                <div class="search_block_mobile search_color2" id="search_block_mobile2">通識</div>
+                <div class="search_block_mobile search_color3" id="search_block_mobile3">體育</div>
+                <div class="search_block_mobile search_color4" id="search_block_mobile4">軍訓</div>
+                <div class="search_block_mobile search_color4" id="search_block_mobile5">服務學習</div>
+                <div class="search_block_mobile search_color3" id="search_block_mobile6">教育</div>
+                <div class="search_block_mobile search_color2" id="search_block_mobile7">微學分</div>
+                <div class="search_block_mobile search_color1" id="search_block_mobile8">全部</div>
+            </div>
+        </div>
+        <div class="main_page" id="main_link">
+            <div class="main_title">
+                <img src="./files/images/search.jpg" alt="">
+                <span class="main_title_content">其他課程連結</span>
+            </div>
+            <div class="main_link_block main_link_block_template">
+                <div class="link_block" id="link_block1"><a href="https://egb.aca.ntut.edu.tw/ief/325">MOOCS課程</a></div>
+                <div class="link_block" id="link_block2"><a href="https://rnd.ntut.edu.tw/p/412-1042-13355.php?Lang=zh-tw">學術倫理課程</a></div>
+                <div class="link_block" id="link_block3"><a href="https://egb.aca.ntut.edu.tw/ief/325">北聯大跨校課程</a></div>
+                <div class="link_block" id="link_block4"><a href="https://egb.aca.ntut.edu.tw/ief/325">跨領域學分學程</a></div>
+            </div>
+        </div>
+    </main>
+    <footer>DESIGN BY @WHO</footer>
+    <script src="home.js"></script>
+</body>
+
+</html>

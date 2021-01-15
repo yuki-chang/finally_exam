@@ -1,0 +1,351 @@
+/**** Responsive design ****/
+@media (orientation: landscape) {
+  html {
+    font-size: 1vh;
+  }
+}
+
+@media (orientation: portrait) {
+  html {
+    font-size: 1.3vw;
+  }
+}
+
+/** S **/
+@media screen and (max-width: 512px) {
+  #body_template {
+    display: grid;
+    grid-template:
+      "header" 40rem
+      "form" auto
+      "footer" 10rem;
+  }
+  form {
+    grid-area: form;
+    display: grid;
+    grid-template:
+      "username" 10rem
+      "password" 10rem
+      "certificate" 10rem
+      "login" 10rem
+      "forgot" 10rem
+      "forget" 10rem
+      "change" 10rem
+      "help" 10rem;
+  }
+  nav {
+    display: none;
+  }
+}
+
+/** M **/
+@media screen and (min-width: 512px) {
+  #body_template {
+    display: grid;
+    grid-template:
+      "header" 20rem
+      "form" auto
+      "nav " auto
+      "footer" 10rem;
+  }
+  form {
+    grid-area: form;
+    display: grid;
+    grid-template:
+      "username username username username" 10rem
+      "password password password password" 10rem
+      "certificate certificate certificate certificate" 10rem
+      "login login login login" 10rem
+      "forgot forget change help" 10rem
+      /25% 25% 25% 25%;
+  }
+  nav {
+    grid-area: nav;
+    margin: 0 3rem;
+  }
+}
+
+/** L **/
+@media screen and (min-width: 1305px) {
+  #body_template {
+    display: grid;
+    grid-template:
+      "header header" 20rem
+      "nav form" auto
+      "footer footer" 10rem;
+  }
+  form {
+    grid-area: form;
+    display: grid;
+    grid-template:
+      "username username username username" 10rem
+      "password password password password" 10rem
+      "certificate certificate certificate certificate" 10rem
+      "login login login login" 10rem
+      "forgot forget change help" 10rem
+      /25% 25% 25% 25%;
+  }
+  body {
+    height: 100vh;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  nav {
+    grid-area: nav;
+    margin: 0 3rem;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./files/font/Montserrat/Montserrat-Regular.ttf") format("truetype"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "Montserrat_Bold";
+  src: url("./files/font/Montserrat/Montserrat-Bold.ttf") format("truetype"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Zeyada";
+  src: url("./files/font/Zeyada/Zeyada-Regular.ttf") format("truetype"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./files/font/Roboto_Mono/static/RobotoMono-Light.ttf")
+    format("truetype"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Molengo";
+  src: url("./files/font/Molengo/Molengo-Regular.ttf") format("truetype"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body,
+h1,
+h2,
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-family: "Montserrat_Bold";
+  vertical-align: baseline;
+}
+
+body {
+  background-color: #122542;
+  color: #ffffff;
+  font-family: "Montserrat_Bold";
+  font-size: 2.2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  grid-area: header;
+  padding: 5rem;
+}
+
+nav p {
+  margin: 5rem 0;
+}
+
+.nav_list {
+  padding-left: 10rem;
+}
+
+#nav_yellow {
+  color: #f9fd4c;
+}
+
+.main_list {
+  align-items: center;
+  display: grid;
+  grid-template:
+    "main_list_label" 5rem
+    "main_list_input" 5rem;
+}
+.main_list label {
+  grid-area: main_list_label;
+}
+
+.main_list input {
+  height: 5rem;
+  padding: 0 2rem !important;
+  grid-area: main_list_input;
+}
+
+.main_list_certificate {
+  align-items: center;
+  display: grid;
+  grid-template:
+    "certificate_label certificate_label" 5rem
+    "certificate_input certificate_img" 5rem
+    / auto 16.5rem;
+}
+#certificate label {
+  grid-area: certificate_label;
+}
+#certificate input {
+  grid-area: certificate_input;
+  height: 5rem;
+  width: auto;
+  padding: 0 2rem !important;
+}
+
+#certificate img {
+  grid-area: certificate_img;
+  height: 5rem;
+  width: auto;
+}
+
+#username {
+  grid-area: username;
+}
+#password {
+  grid-area: password;
+}
+#certificate {
+  grid-area: certificate;
+}
+#login {
+  cursor: pointer;
+  grid-area: login;
+  width: 20rem;
+  margin: auto;
+  height: 5rem;
+  border-radius: 2rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #da4848;
+  color: #122542;
+  font-family: "Molengo";
+  transition: 1s;
+}
+
+#login:hover {
+  transform: translate(0, +5%);
+}
+#forgot {
+  grid-area: forgot;
+  background-color: #d9c2ba;
+}
+#forget {
+  grid-area: forget;
+  background-color: #fffeff;
+}
+#change {
+  grid-area: change;
+  background-color: #d9c2ba;
+}
+#help {
+  grid-area: help;
+  background-color: #fffeff;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 3rem;
+  margin: 1rem;
+  display: grid;
+  color: #122542;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  transition: 1s;
+}
+
+.button:hover {
+  transform: translate(0, +5%);
+}
+footer {
+  grid-area: footer;
+  display: grid;
+  align-items: end;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  opacity: 0;
+  visibility: visible;
+  -webkit-animation: fadeIn 3s;
+  animation: fadeIn 3s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
